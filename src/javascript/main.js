@@ -3,6 +3,8 @@ function calcularIMC(event) {
     let nome = document.getElementById("nome").value;
     let peso = parseFloat(document.getElementById("peso").value.replace(",", "."));
     let altura = parseFloat(document.getElementById("altura").value.replace(",", "."));
+    let resultado = document.getElementById("resultado");
+    resultado.className = "";
 
       if (!nome || isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
         resultado.innerText = "Preencha todos os campos corretamente.";
